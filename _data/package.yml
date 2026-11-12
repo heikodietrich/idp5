@@ -1,76 +1,71 @@
-name: GitHubPagesForGAP
-version: "0.2"
-license: "0BSD"
-date: 2017-02-04
+name: Idp5
+version: "1.0.0"
+license: "GPL-2.0-or-later"
+date: 2026-11-08
 description: |
-    A GitHub Pages generator for GAP packages
+    Identification of the groups of order dividing p^5
 
 authors:
-    - name: Max Horn
-      url: http://www.quendi.de/math
-    - name: A. U. Thor
+    - name: Heiko Dietrich
+      url: http://users.monash.edu.au/~heikod/
+    - name: Henrik Schanze
+      url: https://www.iaa.tu-bs.de/henschan
 
 maintainers:
-    - name: Max Horn
-      url: http://www.quendi.de/math
-    - name: Jan Itor
+    - name: Heiko Dietrich
+      url: http://users.monash.edu.au/~heikod/
 
-GAP: ">=4.8.1"
+GAP: ">= 4.14"
 
 needed-pkgs:
-    - name: "GAPDoc"
-      version: ">= 1.2"
-      url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
-    - name: "IO"
-      version: ">= 4.1"
-      url: "https://gap-packages.github.io/io"
+    - name: "smallgrp"
+      version: ">= 1.5"
+      url: "https://gap-packages.github.io/smallgrp/"
 
 suggested-pkgs:
-    - name: "orb"
-      version: ">= 4.2"
-      url: "https://gap-packages.github.io/orb"
+    - name: "autpgrp"
+      version: ">= 1.10"
+      url: "https://gap-packages.github.io/autpgrp/"
 
-www: https://gap-system.github.io/GitHubPagesForGAP/
+www: https://heikodietrich.github.io/idp5/
 readme: README.md
-packageinfo: https://gap-system.github.io/GitHubPagesForGAP/PackageInfo.g
-github: https://github.com/gap-system/GitHubPagesForGAP
+packageinfo: https://heikodietrich.github.io/idp5/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-system/GitHubPagesForGAP/releases/download/v0.2/GitHubPagesForGAP-0.2.tar.gz
-    - name: .tar.bz2
-      url: https://github.com/gap-system/GitHubPagesForGAP/releases/download/v0.2/GitHubPagesForGAP-0.2.tar.bz2
+      url: https://github.com/heikodietrich/idp5/releases/download/v1.0.0/idp5-1.0.0.tar.gz
 
 abstract: |
-    This is a pseudo package that contains no actual  <span class="pkgname">GAP</span> code. Instead, it is a template for other  GAP packages that allows to quickly setup GitHub Pages.
+    The <span class="pkgname">Idp5</span> package identifies the groups of order dividing p<sup>5</sup>, for any prime p, with the groups in the SmallGroups library, and constructs isomorphisms onto the library groups.
 
-status: other
 doc-html: doc/chap0.html
 doc-pdf: doc/manual.pdf
 keywords: |
-    GitHub Pages, GAP.
+    group identification, IdGroup, IdSmallGroup, p-groups, groups of order p^5, small groups library, isomorphism.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>HTI17</span>]   <b class='BibAuthor'>Horn, M., Thor, A. U. and Itor, J.</b>,
-     <i class='BibTitle'>GitHubPagesForGAP, A GitHub Pages generator for GAP packages,
-             Version 0.2</i>
-     (<span class='BibYear'>2017</span>)<br />
+    [<span class='BibKey'>DS26</span>]   <b class='BibAuthor'>Dietrich, H. and Schanze, H.</b>,
+     <i class='BibTitle'>Idp5, Identification of the groups of order dividing p^5,
+             Version 1.0.0</i>
+     (<span class='BibYear'>2026</span>)<br />
     (<span class='BibNote'>GAP package</span>),
-    <span class='BibHowpublished'><a href="https://gap-system.github.io/GitHubPagesForGAP/">https://gap-system.github.io/GitHubPagesForGAP/</a></span>.
+    <span class='BibHowpublished'><a href="https://heikodietrich.github.io/idp5/">https://heikodietrich.github.io/idp5/</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ GitHubPagesForGAP0.2,
-      author =           {Horn, M. and Thor, A. U. and Itor, J.},
-      title =            {{GitHubPagesForGAP}, A GitHub Pages generator for GAP packages, {V}ersion 0.2},
-      month =            {Feb},
-      year =             {2017},
+    @misc{ Idp5,
+      author =           {Dietrich, H. and Schanze, H.},
+      title =            {{Idp5},    {Identification    of    the    groups    of   order   dividing
+                          p\texttt{\symbol{94}}5}, {V}ersion 1.0.0},
+      month =            {Nov},
+      year =             {2026},
       note =             {GAP package},
-      howpublished =     {\href                              {https://gap-system.github.io/GitHubPagesForGAP/}
-                          {\texttt{https://gap-system.github.io/}\discretionary
-                          {}{}{}\texttt{GitHubPagesForGAP/}}},
-      keywords =         {GitHub Pages; GAP},
-      printedkey =       {HTI17}
+      howpublished =     {\href                              {https://heikodietrich.github.io/idp5/}
+                          {\texttt{https://heikodietrich.github.io/}\discretionary
+                          {}{}{}\texttt{idp5/}}},
+      keywords =         {group  identification; IdGroup; IdSmallGroup; p\texttt{\symbol{45}}groups;
+                          groups of order p\texttt{\symbol{94}}5; small groups library; isomorphism},
+      printedkey =       {DS26}
     }
 
