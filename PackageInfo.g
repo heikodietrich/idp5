@@ -81,7 +81,7 @@ Keywords := [ "group identification", "IdGroup", "IdSmallGroup",
 AutoDoc := rec(
   TitlePage := rec(
     Copyright := """
-&#169; 2026 by Heiko Dietrich, Bettina Eick, and Henrik Schanze.
+&#169; 2026 by Heiko Dietrich, and Henrik Schanze.
 <P/>
 The &Idp5; package is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by the
