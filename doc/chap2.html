@@ -19,7 +19,7 @@
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p id="mathjaxlink" class="pcenter"></p>
+<p id="mathjaxlink" class="pcenter"><a href="chap2_mj.html">[MathJax on]</a></p>
 <p><a id="X86FA580F8055B274" name="X86FA580F8055B274"></a></p>
 <div class="ChapSects"><a href="chap2.html#X86FA580F8055B274">2 <span class="Heading">Functions</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X809B03E67FB9361D">2.1 <span class="Heading">Identification</span></a>
@@ -54,22 +54,20 @@
 
 <h4>2.1 <span class="Heading">Identification</span></h4>
 
-<p>The package installs a method for the attribute <code class="func">IdSmallGroup</code> (<a href="/Users/heikod/gap-4.15.1/pkg/smallgrp/doc/chap1.html#X83044B9D7E3BDF35"><span class="RefLink">smallgrp: IdSmallGroup</span></a>) (a synonym of <code class="func">IdGroup</code> (<a href="/Users/heikod/gap-4.15.1/pkg/smallgrp/doc/chap1.html#X83044B9D7E3BDF35"><span class="RefLink">smallgrp: IdGroup</span></a>)) of the SmallGroups library. For a group <span class="SimpleMath">G</span> of order <span class="SimpleMath">p^n</span> with <span class="SimpleMath">p &gt; 5</span> prime and <span class="SimpleMath">n ≤ 5</span>, this method returns the pair <code class="code">[p^n,i]</code> such that <span class="SimpleMath">G</span> is isomorphic to <code class="code">SmallGroup(p^n,i)</code>. For all other groups, in particular for the groups of order <span class="SimpleMath">2^n</span>, <span class="SimpleMath">3^n</span> and <span class="SimpleMath">5^n</span>, the methods of the SmallGroups library are used.</p>
+<p>The package registers the identification of the groups of order <span class="SimpleMath">p^5</span>, <span class="SimpleMath">p &gt; 5</span> prime, with the SmallGroups library. For such a group <span class="SimpleMath">G</span>, the attribute <code class="func">IdSmallGroup</code> (<a href="/home/henschan/gap-4.16.0/pkg/smallgrp/doc/chap1.html#X83044B9D7E3BDF35"><span class="RefLink">smallgrp: IdSmallGroup</span></a>) (a synonym of <code class="func">IdGroup</code> (<a href="/home/henschan/gap-4.16.0/pkg/smallgrp/doc/chap1.html#X83044B9D7E3BDF35"><span class="RefLink">smallgrp: IdGroup</span></a>)) then returns the pair <code class="code">[p^5,i]</code> such that <span class="SimpleMath">G</span> is isomorphic to <code class="code">SmallGroup(p^5,i)</code>, and <code class="func">IdGroupsAvailable</code> (<a href="/home/henschan/gap-4.16.0/pkg/smallgrp/doc/chap1.html#X7C0C616180DE5875"><span class="RefLink">smallgrp: IdGroupsAvailable</span></a>) returns <code class="keyw">true</code> for <span class="SimpleMath">p^5</span>. All other groups, in particular those of order <span class="SimpleMath">p^n</span> with <span class="SimpleMath">n ≤ 4</span> and those of order <span class="SimpleMath">2^5</span>, <span class="SimpleMath">3^5</span> and <span class="SimpleMath">5^5</span>, are identified by the SmallGroups library itself.</p>
 
-<p>The input group can be given in any representation in which <strong class="pkg">GAP</strong> can compute with it, for example as a pc group, a permutation group, or a matrix group. If an isomorphism onto the library group is found during the identification, which is the case for the groups of order dividing <span class="SimpleMath">p^4</span>, then it is stored as the value of <code class="func">IsomorphismSmallGroup</code> (<a href="chap2.html#X7A12144B7C3571EA"><span class="RefLink">2.2-1</span></a>).</p>
+<p>The input group can be given in any representation in which <strong class="pkg">GAP</strong> can compute with it, for example as a pc group, a permutation group, or a matrix group.</p>
 
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := Group(GeneratorsOfGroup(SmallGroup(11^5, 40)));;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IdGroup(G);</span>
 [ 161051, 40 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := Image(RegularActionHomomorphism(SmallGroup(13^4, 9)));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := Image(RegularActionHomomorphism(SmallGroup(7^5, 9)));;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IdSmallGroup(G);</span>
-[ 28561, 9 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasIsomorphismSmallGroup(G);</span>
+[ 16807, 9 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IdGroupsAvailable(17^5);</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IdGroupsAvailable(17^5);  # the SmallGroups library has no ID function</span>
-false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NumberSmallGroups(17^5);</span>
 101
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAll([1..101], i -&gt; IdGroup(Group(GeneratorsOfGroup(SmallGroup(17^5,i))))</span>
@@ -92,7 +90,7 @@ true
 
 
 <ul>
-<li><p>If <span class="SimpleMath">p &gt; 5</span> and <span class="SimpleMath">n ≤ 4</span>, then the isomorphism is computed together with <code class="code">IdSmallGroup(<var class="Arg">G</var>)</code>.</p>
+<li><p>If <span class="SimpleMath">p &gt; 5</span> and <span class="SimpleMath">n ≤ 4</span>, then the isomorphism is computed together with the ID by the identification algorithm of the package.</p>
 
 </li>
 <li><p>If <span class="SimpleMath">p ∈ {2,3}</span>, or if <span class="SimpleMath">p=5</span> and <span class="SimpleMath">n ≤ 4</span>, then <strong class="pkg">GAP</strong>'s function <code class="code">IsomorphismGroups</code> is used.</p>
@@ -183,7 +181,7 @@ true
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; TestSmallGroupID_p5</code>( <var class="Arg">lps</var>, <var class="Arg">nr</var>, <var class="Arg">testIso</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: a record with the runtimes and the failures</p>
 
-<p>For every prime <span class="SimpleMath">p</span> in the list <var class="Arg">lps</var>, every <span class="SimpleMath">e</span> in <code class="code">[1..5]</code> and every <span class="SimpleMath">i</span> in <code class="code">[1..NumberSmallGroups(p^e)]</code>, this function constructs <var class="Arg">nr</var> random isomorphic copies of <code class="code">SmallGroup(p^e,i)</code> (pc groups with respect to a random pcgs), and checks that <code class="func">IdSmallGroup</code> (<a href="/Users/heikod/gap-4.15.1/pkg/smallgrp/doc/chap1.html#X83044B9D7E3BDF35"><span class="RefLink">smallgrp: IdSmallGroup</span></a>) returns <code class="code">[p^e,i]</code>. If <var class="Arg">testIso</var> is <code class="keyw">true</code>, then it also checks that <code class="func">IsomorphismSmallGroup</code> (<a href="chap2.html#X7A12144B7C3571EA"><span class="RefLink">2.2-1</span></a>) returns an isomorphism onto the library group. For each copy, the runtimes in milliseconds are printed. For the groups of order <span class="SimpleMath">p^5</span>, the average runtimes and the ten largest runtimes are printed at the end, as well as the numbers of wrong IDs, of failed isomorphism searches, and of returned maps that are not isomorphisms. A wrong ID, and a map that is not an isomorphism, also cause an error.</p>
+<p>For every prime <span class="SimpleMath">p</span> in the list <var class="Arg">lps</var>, every <span class="SimpleMath">e</span> in <code class="code">[1..5]</code> and every <span class="SimpleMath">i</span> in <code class="code">[1..NumberSmallGroups(p^e)]</code>, this function constructs <var class="Arg">nr</var> random isomorphic copies of <code class="code">SmallGroup(p^e,i)</code> (pc groups with respect to a random pcgs), and checks that <code class="func">IdSmallGroup</code> (<a href="/home/henschan/gap-4.16.0/pkg/smallgrp/doc/chap1.html#X83044B9D7E3BDF35"><span class="RefLink">smallgrp: IdSmallGroup</span></a>) returns <code class="code">[p^e,i]</code>. If <var class="Arg">testIso</var> is <code class="keyw">true</code>, then it also checks that <code class="func">IsomorphismSmallGroup</code> (<a href="chap2.html#X7A12144B7C3571EA"><span class="RefLink">2.2-1</span></a>) returns an isomorphism onto the library group. For each copy, the runtimes in milliseconds are printed. For the groups of order <span class="SimpleMath">p^5</span>, the average runtimes and the ten largest runtimes are printed at the end, as well as the numbers of wrong IDs, of failed isomorphism searches, and of returned maps that are not isomorphisms. A wrong ID, and a map that is not an isomorphism, also cause an error.</p>
 
 <p>The returned record has the components <code class="code">id</code> and <code class="code">iso</code> (lists of triples <code class="code">[time, p, i]</code> for the groups <code class="code">SmallGroup(p^5,i)</code>), <code class="code">wrong</code>, <code class="code">failed</code> and <code class="code">notiso</code> (lists of the groups for which the ID was wrong, the isomorphism search failed, or the returned map was not an isomorphism). The runtimes depend on the machine.</p>
 

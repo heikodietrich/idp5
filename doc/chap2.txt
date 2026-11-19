@@ -4,30 +4,27 @@
   
   [1X2.1 [33X[0;0YIdentification[133X[101X
   
-  [33X[0;0YThe  package  installs  a  method  for the attribute [2XIdSmallGroup[102X ([14Xsmallgrp:
-  IdSmallGroup[114X)  (a synonym of [2XIdGroup[102X ([14Xsmallgrp: IdGroup[114X)) of the SmallGroups
-  library.  For a group [22XG[122X of order [22Xp^n[122X with [22Xp > 5[122X prime and [22Xn ≤ 5[122X, this method
-  returns the pair [10X[p^n,i][110X such that [22XG[122X is isomorphic to [10XSmallGroup(p^n,i)[110X. For
-  all  other  groups,  in particular for the groups of order [22X2^n[122X, [22X3^n[122X and [22X5^n[122X,
-  the methods of the SmallGroups library are used.[133X
+  [33X[0;0YThe  package  registers the identification of the groups of order [22Xp^5[122X, [22Xp > 5[122X
+  prime,  with  the  SmallGroups  library.  For  such a group [22XG[122X, the attribute
+  [2XIdSmallGroup[102X  ([14Xsmallgrp:  IdSmallGroup[114X)  (a  synonym  of  [2XIdGroup[102X ([14Xsmallgrp:
+  IdGroup[114X))  then  returns  the  pair  [10X[p^5,i][110X  such  that  [22XG[122X is isomorphic to
+  [10XSmallGroup(p^5,i)[110X,   and   [2XIdGroupsAvailable[102X  ([14Xsmallgrp:  IdGroupsAvailable[114X)
+  returns  [9Xtrue[109X  for  [22Xp^5[122X.  All other groups, in particular those of order [22Xp^n[122X
+  with  [22Xn  ≤  4[122X  and  those  of  order [22X2^5[122X, [22X3^5[122X and [22X5^5[122X, are identified by the
+  SmallGroups library itself.[133X
   
   [33X[0;0YThe  input group can be given in any representation in which [5XGAP[105X can compute
-  with  it, for example as a pc group, a permutation group, or a matrix group.
-  If an isomorphism onto the library group is found during the identification,
-  which is the case for the groups of order dividing [22Xp^4[122X, then it is stored as
-  the value of [2XIsomorphismSmallGroup[102X ([14X2.2-1[114X).[133X
+  with it, for example as a pc group, a permutation group, or a matrix group.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XG := Group(GeneratorsOfGroup(SmallGroup(11^5, 40)));;[127X[104X
     [4X[25Xgap>[125X [27XIdGroup(G);[127X[104X
     [4X[28X[ 161051, 40 ][128X[104X
-    [4X[25Xgap>[125X [27XG := Image(RegularActionHomomorphism(SmallGroup(13^4, 9)));;[127X[104X
+    [4X[25Xgap>[125X [27XG := Image(RegularActionHomomorphism(SmallGroup(7^5, 9)));;[127X[104X
     [4X[25Xgap>[125X [27XIdSmallGroup(G);[127X[104X
-    [4X[28X[ 28561, 9 ][128X[104X
-    [4X[25Xgap>[125X [27XHasIsomorphismSmallGroup(G);[127X[104X
+    [4X[28X[ 16807, 9 ][128X[104X
+    [4X[25Xgap>[125X [27XIdGroupsAvailable(17^5);[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XIdGroupsAvailable(17^5);  # the SmallGroups library has no ID function[127X[104X
-    [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27XNumberSmallGroups(17^5);[127X[104X
     [4X[28X101[128X[104X
     [4X[25Xgap>[125X [27XForAll([1..101], i -> IdGroup(Group(GeneratorsOfGroup(SmallGroup(17^5,i))))[127X[104X
@@ -46,8 +43,8 @@
   [33X[0;0YFor  a  group  [3XG[103X  of  order [22Xp^n[122X with [22Xp[122X prime and [22Xn ≤ 5[122X, this attribute is an
   isomorphism from [3XG[103X onto the library group [10XSmallGroup(IdSmallGroup([3XG[103X[10X))[110X.[133X
   
-  [30X    [33X[0;6YIf  [22Xp  >  5[122X  and [22Xn ≤ 4[122X, then the isomorphism is computed together with
-        [10XIdSmallGroup([3XG[103X[10X)[110X.[133X
+  [30X    [33X[0;6YIf [22Xp > 5[122X and [22Xn ≤ 4[122X, then the isomorphism is computed together with the
+        ID by the identification algorithm of the package.[133X
   
   [30X    [33X[0;6YIf   [22Xp   ∈   {2,3}[122X,  or  if  [22Xp=5[122X  and  [22Xn  ≤  4[122X,  then  [5XGAP[105X's  function
         [10XIsomorphismGroups[110X is used.[133X

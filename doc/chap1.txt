@@ -17,8 +17,9 @@
   isomorphism    from    a    group    [22XG[122X    of   order   dividing   [22Xp^5[122X   onto
   [10XSmallGroup(IdSmallGroup(G))[110X.[133X
   
-  [33X[0;0YThe  function [2XIdGroupsAvailable[102X ([14Xsmallgrp: IdGroupsAvailable[114X) is not changed
-  by the package: for example, [10XIdGroupsAvailable(7^5)[110X still returns [9Xfalse[109X.[133X
+  [33X[0;0YThe  package  adds  its  identification to the SmallGroups library, so after
+  loading  [5XIdp5[105X,  [2XIdGroupsAvailable[102X ([14Xsmallgrp: IdGroupsAvailable[114X) returns [9Xtrue[109X
+  for the orders [22Xp^5[122X, [22Xp ≥ 7[122X.[133X
   
   [33X[0;0YThe  identification  of  a  group  of  order  dividing  [22Xp^4[122X  also  yields an
   isomorphism  onto  the library group. The identification of a group of order

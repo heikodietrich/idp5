@@ -14,8 +14,6 @@
   
                                  Heiko Dietrich
   
-                                  Bettina Eick
-  
                                  Henrik Schanze
   
   
@@ -23,9 +21,6 @@
   Heiko Dietrich
       Email:    [7Xmailto:heiko.dietrich@monash.edu[107X
       Homepage: [7Xhttp://users.monash.edu.au/~heikod/[107X
-  Bettina Eick
-      Email:    [7Xmailto:beick@tu-bs.de[107X
-      Homepage: [7Xhttp://www.iaa.tu-bs.de/beick[107X
   Henrik Schanze
       Email:    [7Xmailto:henrik.schanze@tu-braunschweig.de[107X
       Homepage: [7Xhttps://www.iaa.tu-bs.de/henschan[107X
@@ -39,7 +34,7 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y© 2026 by Heiko Dietrich, Bettina Eick, and Henrik Schanze.[133X
+  [33X[0;0Y© 2026 by Heiko Dietrich, and Henrik Schanze.[133X
   
   [33X[0;0YThe  [5XIdp5[105X package is free software; you can redistribute it and/or modify it
   under  the  terms of the GNU General Public License as published by the Free
