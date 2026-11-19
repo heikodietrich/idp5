@@ -35,8 +35,6 @@ Persons := [
   ),
 ],
 
-# TODO: create the GitHub repository (and its GitHub Pages site) before
-# submitting the package; GAP's package distribution reads PackageInfoURL.
 SourceRepository := rec(
     Type := "git",
     URL := "https://github.com/heikodietrich/idp5",
@@ -83,7 +81,7 @@ Keywords := [ "group identification", "IdGroup", "IdSmallGroup",
 AutoDoc := rec(
   TitlePage := rec(
     Copyright := """
-&#169; 2026 by Heiko Dietrich, Bettina Eick, and Henrik Schanze.
+&#169; 2026 by Heiko Dietrich, and Henrik Schanze.
 <P/>
 The &Idp5; package is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by the
