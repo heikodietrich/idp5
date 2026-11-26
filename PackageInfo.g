@@ -9,7 +9,7 @@ SetPackageInfo( rec(
 PackageName := "Idp5",
 Subtitle := "Identification of the groups of order dividing p^5",
 Version := "1.0.0",
-Date := "08/11/2026", # dd/mm/yyyy format
+Date := "26/11/2026", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
